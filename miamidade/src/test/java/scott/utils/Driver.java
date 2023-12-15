@@ -12,7 +12,7 @@ import org.openqa.selenium.safari.SafariDriver;
 
 
 public class Driver {
-    private Driver() {
+    public Driver() {
     }
     // InheritableThreadLocal  --> this is like a container, bag, pool.
     // in this pool we can have separate objects for each thread
