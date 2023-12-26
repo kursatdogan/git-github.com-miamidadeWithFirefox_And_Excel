@@ -10,10 +10,15 @@ import org.openqa.selenium.TakesScreenshot;
 import java.util.concurrent.TimeUnit;
 
 public class Hooks {
+
+    public static int counterExpected = 0;
+    public static int counterActual = 0;
     @Before
     public void setUp(){
        Driver.get().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
     }
+
 
     @After
     public void tearDown(Scenario scenario){

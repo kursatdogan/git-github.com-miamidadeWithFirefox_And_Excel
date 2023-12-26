@@ -58,8 +58,11 @@ public class DownloadPage {
         //@FindBy(xpath = "//td[contains(text(), 'Minutes') or contains(text(), 'Verdict') or contains(text(), 'Mediators Report')]/parent::tr/td[1]")
         //public List<WebElement> pdfIcons;
 
-        @FindBy(xpath = "//td[contains(text(), 'Minute') or contains(text(), 'Verdict') or contains(text(), 'Mediator')]/parent::tr/td[1]")
+        @FindBy(xpath = "//td[contains(text(), 'Minutes') or contains(text(), 'Verdict') or contains(text(), 'Mediator')]/parent::tr/td[1]")
         public List<WebElement> pdfIcons;
+
+        @FindBy(xpath = "(//td[contains(text(), 'Minute') or contains(text(), 'Verdict') or contains(text(), 'Mediator')]/parent::tr/td[1])[4]")
+        public WebElement pdfIcons4;
 
 
         public void login(String userType) {

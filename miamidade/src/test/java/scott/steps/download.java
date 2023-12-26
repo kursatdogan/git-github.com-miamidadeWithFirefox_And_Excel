@@ -1,15 +1,16 @@
 package scott.steps;
 
 import io.cucumber.java.en.And;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import io.cucumber.messages.types.Hook;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.asserts.SoftAssert;
 import scott.pages.DownloadPage;
 import scott.utils.ConfigurationReader;
 import scott.utils.Driver;
@@ -21,9 +22,18 @@ import org.junit.Assert;
 import javax.lang.model.SourceVersion;
 import javax.swing.*;
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.sql.SQLOutput;
-import java.util.List;
-import java.util.Set;
+import java.text.SimpleDateFormat;
+import java.util.*;
+import java.util.NoSuchElementException;
+import org.apache.commons.io.FileUtils;
+
+import org.openqa.selenium.WebDriver;
+import scott.utils.SingletonInteger;
+
 
 public class download {
     DownloadPage downloadPage = new DownloadPage();
@@ -33,6 +43,7 @@ public class download {
     @Given("user is on the login page")
     public void user_is_on_the_login_page(){
         Driver.get().get(ConfigurationReader.get("url"));
+
     }
 
     @When("user enters valid {string} and {string}")
@@ -82,74 +93,157 @@ public class download {
         downloadPage.dockets.click();
     }
 
-    @When("I download the pdf files to my folder")
-    public void i_download_the_pdf_files_to_my_folder() {
-        // Set the path to the desktop folder where you want to create the foldercasenumber
-        String desktopFolder = "/Users/kursatdogan/Desktop/autoDownloadCourtDocuments";
 
+    @When("I download the pdf files to my folder with {string}")
+    public void i_download_the_pdf_files_to_my_folder_with(String caseNumber) throws InterruptedException {
         List<WebElement> elements = downloadPage.pdfIcons;
+        SoftAssert softAssert = new SoftAssert();
 
-        Actions actions = new Actions(Driver.get());
 
-        // Create a foldercasenumber under the desktop folder
-        String pdfFolder = desktopFolder + File.separator + "caseNumber";
-        new File(pdfFolder).mkdirs();
+        // Specify the name of the folder you want to create
+        String folderName = "Case_" + caseNumber;
+
+        // Specify the path to the folder, including the folder name
+        String folderPath = "/Users/kursatdogan/Desktop/downloaded files/" + folderName;
+
+        // Create a File object with the folder path
+        File folder = new File(folderPath);
+
+        // Perform the folder creation operation
+        boolean created = folder.mkdir(); // Use mkdirs() for creating parent directories if they don't exist
 
         // Iterate through the elements and download PDFs
         for (int index = 1; index <= elements.size(); index++) {
             WebElement element = elements.get(index - 1);
             element.click();
 
+            Hooks.counterExpected++;
 
+            // Optional: Clear cookies and switch back to the main window
+            Driver.get().manage().deleteAllCookies();
+            Driver.get().switchTo().window(Driver.get().getWindowHandles().iterator().next());
 
-            // Wait for the download to complete (you might need to adjust the time or use a better strategy)
+            // Optional: Add a delay to wait before proceeding to the next iteration
             try {
                 Thread.sleep(5000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
 
-            // Assuming the downloaded file is a PDF
-            String pdfFileName = "Case_" + index + ".pdf";
-            String pdfFilePath = pdfFolder + File.separator + pdfFileName;
+            // Specify the path to the file you want to rename
+            String filePath = "/Users/kursatdogan/IdeaProjects/git-github.com-miamidade/miamidade/C:\\Users\\Downloads\\test\\/Document.PDF";
 
-            // Rename the downloaded file to move it to the foldercasenumber
-            new File(desktopFolder + File.separator + "downloaded.pdf").renameTo(new File(pdfFilePath));
+            // Create a File object with the current file path
+            File file = new File(filePath);
 
-            Driver.get().switchTo().window(Driver.get().getWindowHandles().iterator().next());
+            String newFileName = "";
 
-            /*Set<String> list = Driver.get().getWindowHandles();
-
-            for (String handle : list) {
-                Driver.get().switchTo().window(handle);
-
-                // Perform actions on the current window
-                // For example, you can check the title of the window
-                String currentWindowTitle = Driver.get().getTitle();
-                System.out.println("Window Title: " + currentWindowTitle);
-
-                // Locate elements, perform actions, etc. on the current window
-
-                // If you find the correct window, you can break out of the loop
-                if (currentWindowTitle.contains("Civil, Family and Probate Courts Online System")) {
-                    break;
-                }
-            }*/
-
-// Switch back to the original window if needed
-            //Driver.get().switchTo().window(originalWindowHandle);
-
-            actions.sendKeys(Keys.COMMAND+"s");
+            // Specify the new name for the file
+            newFileName = folderName + "_file_" + index + ".pdf";
 
 
-            // Close the current tab or window
+            // Create a File object with the new file path
+            File newFile = new File(file.getParent(), newFileName);
 
-            //Driver.get().close();
+            // Perform the rename operation
+            boolean renamed = file.renameTo(newFile);
 
-            // Switch back to the main window (assuming it's the first window handle)
+
+            // Assert that exactly one PDF file is downloaded after each iteration
+            //int actualNumberOfFiles = countPdfFilesInFolder("/Users/kursatdogan/IdeaProjects/git-github.com-miamidade/miamidade/C:\\Users\\Downloads\\test\\");
+
+
+            sourceFolderPath = "/Users/kursatdogan/IdeaProjects/git-github.com-miamidade/miamidade/C:\\Users\\Downloads\\test\\";
+            destinationFolderPath = "/Users/kursatdogan/Desktop/downloaded files/Case_" + caseNumber;
+            movePDFFilesToDestination(sourceFolderPath, destinationFolderPath);
+            int actualNumberOfFiles = countPdfFilesInFolder("/Users/kursatdogan/Desktop/downloaded files/Case_" + caseNumber);
+            Assert.assertEquals("Number of PDF files after download does not match", index, actualNumberOfFiles);
+            Hooks.counterActual++;
+            //softAssert.assertEquals(actualNumberOfFiles, index, "Number of PDF files after download does not match");
+            Thread.sleep(3000);
 
         }
+
+        int expectedFiles = Hooks.counterExpected;
+        int actualFiles = Hooks.counterActual;
+        System.out.println("Expected number of files to download= " + expectedFiles);
+        System.out.println("Actual number of files to download= " + actualFiles);
+
     }
+
+
+    private void downloadInPdfFormat() {
+        // Insert the code for downloading in PDF format
+        // You can use the code provided in the previous response
+        // Make sure to replace placeholders like "path/to/chromedriver" and "your_page_url_here"
+        // with your actual values
+    }
+
+
+
+
+
+    private String sourceFolderPath;
+    private String destinationFolderPath;
+    private List<WebElement> pdfIcons;  // Assuming this represents PDF download links
+
+    @Given("there are PDF files in the source folder {string}")
+    public void setupFolders(String caseNumber) {
+        // Set the paths to your source and destination folders
+        sourceFolderPath = "/Users/kursatdogan/IdeaProjects/git-github.com-miamidade/miamidade/C:\\Users\\Downloads\\test\\";
+        destinationFolderPath = "/Users/kursatdogan/Desktop/downloaded files/Case_" + caseNumber;
+    }
+
+    @When("I move PDF files from the source folder to the destination folder")
+    public void movePDFFiles() {
+
+        // Move PDF files to a folder
+        movePDFFilesToDestination(sourceFolderPath, destinationFolderPath);
+    }
+
+    @Then("the PDF files should be moved successfully to the destination folder")
+    public void verifyFilesMoved() {
+        // Add assertions or verifications if needed
+    }
+
+    private void movePDFFilesToDestination(String sourceFolderPath, String destinationFolderPath) {
+        Path sourcePath = Paths.get(sourceFolderPath);
+        Path destinationPath = Paths.get(destinationFolderPath);
+
+        try {
+            Files.walkFileTree(sourcePath, EnumSet.noneOf(FileVisitOption.class), Integer.MAX_VALUE, new SimpleFileVisitor<Path>() {
+                @Override
+                public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+                    // Move the file to the destination folder
+                    Path destinationFile = destinationPath.resolve(sourcePath.relativize(file));
+                    Files.move(file, destinationFile, StandardCopyOption.REPLACE_EXISTING);
+                    return FileVisitResult.CONTINUE;
+                }
+            });
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // Helper method to count PDF files in a folder
+    private int countPdfFilesInFolder(String folderPath) {
+        Path path = Paths.get(folderPath);
+        int count = 0;
+
+        try (DirectoryStream<Path> stream = Files.newDirectoryStream(path, "*.pdf")) {
+            for (Path entry : stream) {
+                count++;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return count;
+    }
+
+
+
+
 
 
 

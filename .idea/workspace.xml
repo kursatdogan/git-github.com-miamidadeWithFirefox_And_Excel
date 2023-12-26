@@ -4,16 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91348c00-1394-43cd-bdeb-fb3641a11220" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miamidade/src/test/java/scott/pages/DownloadPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miamidade/src/test/java/scott/steps/download.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miamidade/src/test/java/scott/utils/WaitUtils.java" afterDir="false" />
+    <list default="true" id="91348c00-1394-43cd-bdeb-fb3641a11220" name="Changes" comment="some changes">
+      <change afterPath="$PROJECT_DIR$/miamidade/src/test/java/scott/utils/SingletonInteger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miamidade/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miamidade/src/test/java/scott/pages/DownloadPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/src/test/java/scott/pages/DownloadPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miamidade/src/test/java/scott/steps/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/src/test/java/scott/steps/Hooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miamidade/src/test/java/scott/steps/download.java" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/src/test/java/scott/steps/download.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miamidade/src/test/java/scott/utils/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/src/test/java/scott/utils/Driver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miamidade/src/test/resources/features/Download.feature" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/src/test/resources/features/Download.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miamidade/target/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/cucumber.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miamidade/target/default-html-reports" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/default-html-reports" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miamidade/target/test-classes/features/Download.feature" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/test-classes/features/Download.feature" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miamidade/target/test-classes/scott/pages/DownloadPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/test-classes/scott/pages/DownloadPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miamidade/target/test-classes/scott/steps/Hooks.class" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/test-classes/scott/steps/Hooks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miamidade/target/test-classes/scott/steps/download.class" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/test-classes/scott/steps/download.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miamidade/target/test-classes/scott/utils/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/test-classes/scott/utils/Driver.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +35,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;kursatdogan&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="8ac9d590-765c-4bf1-ac38-6579f0882061" />
+        <option name="url" value="https://github.com/NMQDigital/git-github.com-miamidade.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -97,6 +117,15 @@
       <option name="presentableId" value="Default" />
       <updated>1702296290591</updated>
     </task>
+    <task id="LOCAL-00001" summary="some changes">
+      <option name="closed" value="true" />
+      <created>1702634404385</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702634404385</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -109,6 +138,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="some changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="some changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
