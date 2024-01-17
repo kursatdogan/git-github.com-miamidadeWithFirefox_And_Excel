@@ -9,6 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class DownloadPage {
+
         public DownloadPage() {
         PageFactory.initElements(Driver.get(),this);
     }
@@ -49,7 +50,8 @@ public class DownloadPage {
         @FindBy(xpath = "//h1[@id='MainTitle']")
         public WebElement title;
 
-        @FindBy(xpath = "(//div[@class=' card-header TSDcardHeader'])[3]")
+        //@FindBy(xpath = "(//div[@class=' card-header TSDcardHeader'])[3]")
+        @FindBy(xpath = "(//span[@class='fa fa-rss pointer clickable']")
         public WebElement dockets;
 
         @FindBy(xpath = "//td[contains(text(), 'Minutes') or contains(text(), 'Verdict') or contains(text(), 'Mediators Report')]")
@@ -63,6 +65,22 @@ public class DownloadPage {
 
         @FindBy(xpath = "(//td[contains(text(), 'Minute') or contains(text(), 'Verdict') or contains(text(), 'Mediator')]/parent::tr/td[1])[4]")
         public WebElement pdfIcons4;
+
+        @FindBy(id = "ctl00_ContentPlaceHolder1_lblFilingDate_Parties")
+        public  WebElement filingDate;
+
+        @FindBy(id = "ctl00_ContentPlaceHolder1_lblCaseType_Parties")
+        public  WebElement caseType;
+
+        @FindBy(xpath = "//input[@type=\"email\"]")
+        public WebElement dropBoxEmailInputBox;
+
+        @FindBy(xpath = "//button[@type=\"submit\"]")
+        public WebElement dropBoxSubmitBtn;
+
+        @FindBy(xpath = "//input[@type=\"password\"]")
+        public WebElement dropBoxPasswordInputBox;
+
 
 
         public void login(String userType) {

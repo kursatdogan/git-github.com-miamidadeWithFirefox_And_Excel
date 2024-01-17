@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="91348c00-1394-43cd-bdeb-fb3641a11220" name="Changes" comment="some changes">
-      <change afterPath="$PROJECT_DIR$/miamidade/src/test/java/scott/utils/SingletonInteger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/git-github.com-miamidadeWithFirefox_Excel.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/miamidade/src/test/java/scott/pages/DropBoxPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miamidade/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/configuration.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miamidade/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miamidade/src/test/java/scott/pages/DownloadPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/src/test/java/scott/pages/DownloadPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miamidade/src/test/java/scott/steps/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/src/test/java/scott/steps/Hooks.java" afterDir="false" />
@@ -15,6 +20,7 @@
       <change beforePath="$PROJECT_DIR$/miamidade/src/test/resources/features/Download.feature" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/src/test/resources/features/Download.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miamidade/target/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/cucumber.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miamidade/target/default-html-reports" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/default-html-reports" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/miamidade/target/rerun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/rerun.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miamidade/target/test-classes/features/Download.feature" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/test-classes/features/Download.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miamidade/target/test-classes/scott/pages/DownloadPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/test-classes/scott/pages/DownloadPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/miamidade/target/test-classes/scott/steps/Hooks.class" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/test-classes/scott/steps/Hooks.class" afterDir="false" />
@@ -62,10 +68,11 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/kursatdogan/IdeaProjects/git-github.com-miamidade/miamidade/src/test/java/scott/pages&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kursatdogan/IdeaProjects/git-github.com-miamidadeWithFirefox_Excel&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;/Users/kursatdogan/IdeaProjects/git-github.com-miamidade/src/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
   <component name="RecentsManager">
