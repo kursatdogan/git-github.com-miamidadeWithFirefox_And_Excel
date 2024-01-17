@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="91348c00-1394-43cd-bdeb-fb3641a11220" name="Changes" comment="some changes">
-      <change afterPath="$PROJECT_DIR$/.idea/git-github.com-miamidadeWithFirefox_Excel.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miamidade/src/test/java/scott/pages/DropBoxPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miamidade/configuration.properties" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/configuration.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miamidade/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miamidade/src/test/java/scott/pages/DownloadPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/src/test/java/scott/pages/DownloadPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miamidade/src/test/java/scott/steps/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/src/test/java/scott/steps/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miamidade/src/test/java/scott/steps/download.java" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/src/test/java/scott/steps/download.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miamidade/src/test/java/scott/utils/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/src/test/java/scott/utils/Driver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miamidade/src/test/resources/features/Download.feature" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/src/test/resources/features/Download.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miamidade/target/cucumber.json" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/cucumber.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miamidade/target/default-html-reports" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/default-html-reports" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miamidade/target/rerun.txt" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/rerun.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miamidade/target/test-classes/features/Download.feature" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/test-classes/features/Download.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miamidade/target/test-classes/scott/pages/DownloadPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/test-classes/scott/pages/DownloadPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miamidade/target/test-classes/scott/steps/Hooks.class" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/test-classes/scott/steps/Hooks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miamidade/target/test-classes/scott/steps/download.class" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/test-classes/scott/steps/download.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miamidade/target/test-classes/scott/utils/Driver.class" beforeDir="false" afterPath="$PROJECT_DIR$/miamidade/target/test-classes/scott/utils/Driver.class" afterDir="false" />
-    </list>
+    <list default="true" id="91348c00-1394-43cd-bdeb-fb3641a11220" name="Changes" comment="auto download court documents project with excel solution has been created" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -132,7 +110,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702634404385</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="auto download court documents project with excel solution has been created">
+      <option name="closed" value="true" />
+      <created>1705514898072</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705514898072</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -148,7 +134,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="some changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="some changes" />
+    <MESSAGE value="auto download court documents project with excel solution has been created" />
+    <option name="LAST_COMMIT_MESSAGE" value="auto download court documents project with excel solution has been created" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
